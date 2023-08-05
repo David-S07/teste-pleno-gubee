@@ -1,0 +1,52 @@
+---
+apiVersion: v1
+kind: List
+items:
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      fabric8.io/git-commit: bfe0f2ab2ca98e48c47346059362b3a7128170cf
+      fabric8.io/git-branch: main
+      fabric8.io/git-url: https://github.com/David-S07/teste-pleno-gubee.git
+      fabric8.io/scm-url: https://github.com/spring-projects/spring-boot/teste-pleno-gubee/teste-pleno-gubee-core
+      fabric8.io/scm-tag: HEAD
+    labels:
+      app: teste-pleno-gubee-core
+      provider: fabric8
+      version: 1.0.0-SNAPSHOT
+      group: gubee
+    name: teste-pleno-gubee-core
+  spec:
+    replicas: 1
+    revisionHistoryLimit: 2
+    selector:
+      matchLabels:
+        app: teste-pleno-gubee-core
+        provider: fabric8
+        group: gubee
+    template:
+      metadata:
+        annotations:
+          fabric8.io/git-commit: bfe0f2ab2ca98e48c47346059362b3a7128170cf
+          fabric8.io/git-branch: main
+          fabric8.io/scm-tag: HEAD
+          fabric8.io/git-url: https://github.com/David-S07/teste-pleno-gubee.git
+          fabric8.io/scm-url: https://github.com/spring-projects/spring-boot/teste-pleno-gubee/teste-pleno-gubee-core
+        labels:
+          app: teste-pleno-gubee-core
+          provider: fabric8
+          version: 1.0.0-SNAPSHOT
+          group: gubee
+      spec:
+        containers:
+        - env:
+          - name: KUBERNETES_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          image: gubee/teste-pleno-gubee:latest
+          imagePullPolicy: IfNotPresent
+          name: teste-pleno-gubee-api
+          securityContext:
+            privileged: false
