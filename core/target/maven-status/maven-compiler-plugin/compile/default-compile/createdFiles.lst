@@ -1,6 +1,9 @@
+br\com\gubee\interview\core\features\hero\controle\HeroController.class
+br\com\gubee\interview\core\features\hero\exception\HeroCadastradoException.class
 br\com\gubee\interview\core\features\powerstats\PowerStatsRepository.class
 br\com\gubee\interview\core\Application.class
+br\com\gubee\interview\core\features\hero\service\HeroService.class
+br\com\gubee\interview\core\features\hero\repository\HeroRepository.class
+br\com\gubee\interview\core\features\hero\exception\ApiErrors.class
 br\com\gubee\interview\core\configuration\WebConfiguration.class
-br\com\gubee\interview\core\features\hero\HeroController.class
 br\com\gubee\interview\core\configuration\JdbcConfiguration.class
-br\com\gubee\interview\core\features\hero\HeroRepository.class

@@ -6,7 +6,7 @@ items:
   kind: Deployment
   metadata:
     annotations:
-      fabric8.io/git-commit: bfe0f2ab2ca98e48c47346059362b3a7128170cf
+      fabric8.io/git-commit: 36424c4f607ac7edff4385f993dea56a5164304f
       fabric8.io/git-branch: main
       fabric8.io/git-url: https://github.com/David-S07/teste-pleno-gubee.git
       fabric8.io/scm-url: https://github.com/spring-projects/spring-boot/teste-pleno-gubee/teste-pleno-gubee-core
@@ -28,7 +28,7 @@ items:
     template:
       metadata:
         annotations:
-          fabric8.io/git-commit: bfe0f2ab2ca98e48c47346059362b3a7128170cf
+          fabric8.io/git-commit: 36424c4f607ac7edff4385f993dea56a5164304f
           fabric8.io/git-branch: main
           fabric8.io/scm-tag: HEAD
           fabric8.io/git-url: https://github.com/David-S07/teste-pleno-gubee.git
